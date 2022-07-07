@@ -13,7 +13,7 @@ function FahrenheitCentigrados ()
     centigrados = (fahrenheit - 32) / 1.8;
     centigrados = parseInt(centigrados);
 
-    alert(centigrados + "ºC");
+    alert(centigrados.toFixed(0) + "ºC");
 }
 
 function CentigradosFahrenheit () 
@@ -27,7 +27,7 @@ function CentigradosFahrenheit ()
     fahrenheit = centigrados * 1.8 + 32;
     fahrenheit = parseInt(fahrenheit);
 
-    alert(fahrenheit + "ºF");
+    alert(fahrenheit.toFixed(0) + "ºF");
 }
 
 /* Santiago Collazo - santiago.collazo7@gmail.com */
