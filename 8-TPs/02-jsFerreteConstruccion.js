@@ -38,7 +38,8 @@ function Materiales() {
     let largo;
     let ancho;
     let perimetro;
-    let rectangulo;
+    let cemento;
+    let cal;
 
     largo = document.getElementById('txtIdLargo').value;
     largo = parseFloat(largo);
@@ -47,7 +48,13 @@ function Materiales() {
     ancho = parseFloat(ancho);
 
     perimetro = largo * 2 + ancho * 2;
-    rectangulo = perimetro * 3;
 
-    alert("Largo del alambre: " + rectangulo.toFixed(2) + " cm");
+    cemento = perimetro * 2 / 4;
+    cemento = parseInt(cemento);
+    cal = perimetro * 3 / 4;
+    cal = parseInt(cal);
+
+    alert("Materiales contrapiso: " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
 }
+
+/* Santiago Collazo - santiago.collazo7@gmail.com */
