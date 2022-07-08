@@ -6,6 +6,7 @@ let pesoA;
 let pesoB;
 let pesoTotal;
 let promedio;
+let mensaje;
 
 nombreA = prompt("Nombre de la primera persona: ");
 pesoA = prompt("Peso de la primera persona: ");
@@ -19,7 +20,12 @@ pesoTotal = pesoA + pesoB;
 
 promedio = pesoTotal / 2;
 
-alert("Ustedes se llaman " + nombreA + " y " + nombreB + ", pesan " + pesoA + " y " + pesoB + " kilos, que sumados son " + pesoTotal + " kilos y el promedio de peso " + promedio);
+mensaje = "Ustedes se llaman " + nombreA + " y " + nombreB;
+mensaje += ", pesan " + pesoA + " y " + pesoB + " kilos";
+mensaje +=  ", que sumados son " + pesoTotal + " kilos";
+mensaje += " y el promedio de peso " + promedio + " kilos.";
+
+alert(mensaje);
 }
 
 /* Santiago Collazo - santiago.collazo7@gmail.com */
