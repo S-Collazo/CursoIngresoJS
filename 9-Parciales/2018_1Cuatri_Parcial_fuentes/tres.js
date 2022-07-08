@@ -18,3 +18,5 @@ function mostrar()
     
     document.getElementById('elPrecioFinal').value = precioFinal;
 }
+
+// Santiago Collazo - santiago.collazo7@gmail.com

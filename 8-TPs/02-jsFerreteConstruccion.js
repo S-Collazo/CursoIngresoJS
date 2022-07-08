@@ -57,4 +57,4 @@ function Materiales() {
     alert("Materiales contrapiso: " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

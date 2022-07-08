@@ -9,4 +9,4 @@ function mostrar()
 	document.getElementById('txtIdNombre').value = nombre;
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

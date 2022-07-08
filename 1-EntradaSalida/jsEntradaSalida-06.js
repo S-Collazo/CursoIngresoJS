@@ -12,4 +12,4 @@ function sumar()
 	alert("La suma es " + total);
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

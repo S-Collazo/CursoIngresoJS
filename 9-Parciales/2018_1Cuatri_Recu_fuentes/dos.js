@@ -9,3 +9,5 @@ function mostrar()
 
   alert("Usted es " + nombre + " y vive en la locidad de " + localidad);
 }
+
+// Santiago Collazo - santiago.collazo7@gmail.com

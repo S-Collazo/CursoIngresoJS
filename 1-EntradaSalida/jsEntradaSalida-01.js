@@ -5,4 +5,4 @@ function mostrar() {
 	alert("Esto funciona de maravilla");
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

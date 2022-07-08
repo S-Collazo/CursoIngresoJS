@@ -14,4 +14,4 @@ function mostrarAumento()
 	document.getElementById('txtIdResultado').value = resultado;
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

@@ -10,4 +10,4 @@ function mostrar()
 	alert("Usted se llama " + nombreIngresado + " y tiene " + edadIngresada + " años");
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

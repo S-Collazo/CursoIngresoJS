@@ -12,4 +12,4 @@ triangulo = parseInt(triangulo);
 alert("Perímetro del triángulo: " + triangulo + " cm");
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

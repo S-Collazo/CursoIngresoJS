@@ -7,4 +7,4 @@ function mostrar() {
 	alert(nombre);
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

@@ -15,3 +15,5 @@ perimetro = ancho*2 + largo*2;
 
 alert("Perimetro: " + perimetro);
 }
+
+// Santiago Collazo - santiago.collazo7@gmail.com

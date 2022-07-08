@@ -30,4 +30,4 @@ function CentigradosFahrenheit ()
     alert(fahrenheit + "ºF");
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com

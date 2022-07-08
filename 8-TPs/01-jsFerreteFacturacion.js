@@ -66,4 +66,4 @@ function PrecioFinal() {
     alert("Precio Final: " + resultado.toFixed(1));
 }
 
-/* Santiago Collazo - santiago.collazo7@gmail.com */
+// Santiago Collazo - santiago.collazo7@gmail.com
