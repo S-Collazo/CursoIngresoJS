@@ -9,10 +9,12 @@ let promedio;
 let mensaje;
 
 nombreA = prompt("Nombre de la primera persona: ");
+
 pesoA = prompt("Peso de la primera persona: ");
 pesoA = parseInt(pesoA);
 
 nombreB = prompt("Nombre de la segunda persona: ");
+
 pesoB = prompt("Peso de la segunda persona: ");
 pesoB = parseInt(pesoB);
 
