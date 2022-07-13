@@ -76,10 +76,10 @@ function CalcularPrecio() {
 
         precioIIBB = precioFinal + impuesto;
         precioIIBB = parseFloat(precioIIBB);
-        precioIIBB = precioIIBB.toFixed(2);
 
-        mensaje = "IIBB: Usted pago " + precioIIBB;
-        mensaje += ", siendo " + impuesto + " el impuesto que se pagó.";
+        mensaje = precioIIBB.toFixed(2);
+
+        alert("Usted pagó " + impuesto + " de IIBB.");
     }
     else {
         mensaje = precioFinal.toFixed(2);
