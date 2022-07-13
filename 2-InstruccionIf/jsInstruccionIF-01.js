@@ -1,6 +1,12 @@
-function mostrar()
-{
-	//tomo la edad  
-	alert("ok");
+function mostrar() {
+	let edad;
 
-}//FIN DE LA FUNCIÓN
+	edad = document.getElementById('txtIdEdad').value;
+	edad = parseInt(edad);
+
+	if (edad == 15) {
+		alert("Niña bonita.");
+	}
+}
+
+// Santiago Collazo - santiago.collazo7@gmail.com

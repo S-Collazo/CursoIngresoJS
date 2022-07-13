@@ -1,6 +1,12 @@
-function mostrar()
-{
-	//tomo la edad  
-	alert("ok");
+function mostrar() {
+	let edad;
 
-}//FIN DE LA FUNCIÓN
+	edad = document.getElementById('txtIdEdad').value;
+	edad = parseInt(edad);
+
+	if (edad <= 12 || edad >= 18) {
+		alert("No es adolescente.");
+	}
+}
+
+// Santiago Collazo - santiago.collazo7@gmail.com
