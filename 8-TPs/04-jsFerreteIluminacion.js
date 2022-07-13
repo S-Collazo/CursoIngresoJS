@@ -60,7 +60,7 @@ function CalcularPrecio() {
             }
         }
         else {
-            porcentajeDescuento = 1;
+            porcentajeDescuento = 0;
         }
     }
 
