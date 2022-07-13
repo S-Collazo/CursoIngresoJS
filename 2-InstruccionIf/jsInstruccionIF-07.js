@@ -7,6 +7,7 @@ function mostrar() {
 	edad = parseInt(edad);
 
 	estadoCivil = document.getElementById('estadoCivil').value;
+	estadoCivil = String(estadoCivil);
 
 	if (edad < 18 && estadoCivil != "Soltero") {
 		mensaje = "Es muy pequeño para NO ser soltero.";
