@@ -17,10 +17,16 @@ function mostrar() {
         resultado = num1 + num2;
 
         mensaje = resultado;
-    } else if (num1 > num2) {
+    }
+
+    if (num1 > num2) {
         resultado = num1 - num2;
 
-        mensaje = "La resta es " + resultado + " y superó el 10.";
+        mensaje = resultado;
+
+        if (resultado > 10) {
+            mensaje = "La resta es " + resultado + " y superó el 10.";
+        }
     } else {
         resultado = num1 + num2;
         mensaje = resultado;
