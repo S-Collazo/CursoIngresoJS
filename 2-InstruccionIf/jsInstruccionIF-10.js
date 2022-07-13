@@ -3,7 +3,7 @@ function mostrar() {
 	let mensaje;
 	let mensajeFinal;
 
-	nota = Math.random() * (10 - 1) + 1;
+	nota = Math.random() * 10 + 1;
 	nota = Math.floor(nota);
 
 	if (nota >= 9) {
