@@ -32,28 +32,26 @@ function CalcularPrecio() {
     }
 
     if (cantidad == 5) {
+        descuento = 0.30;
         if (marca == "ArgentinaLuz") {
             descuento = 0.40;
-        } else {
-            descuento = 0.30;
         }
     }
 
     if (cantidad == 4) {
+        descuento = 0.20;
         if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
             descuento = 0.25;
-        } else {
-            descuento = 0.20;
         }
     }
 
     if (cantidad == 3) {
+        descuento = 0.05;
         if (marca == "ArgentinaLuz") {
             descuento = 0.15;
-        } else if (marca == "FelipeLamparas") {
+        }
+        if (marca == "FelipeLamparas") {
             descuento = 0.10;
-        } else {
-            descuento = 0.05;
         }
     }
 
@@ -62,7 +60,7 @@ function CalcularPrecio() {
     precioFinal = precio - (precio * descuento);
     precioFinal = parseFloat(precioFinal);
 
-    if(precioFinal > 120){
+    if (precioFinal > 120) {
         impuesto = precioFinal * 0.10;
 
         precioIIBB = precioFinal + impuesto;
@@ -70,7 +68,7 @@ function CalcularPrecio() {
 
         mensaje = "IIBB: Usted pago " + precioIIBB;
         mensaje += ", siendo " + impuesto + " el impuesto que se pagó.";
-    } else{
+    } else {
         mensaje = precioFinal.toFixed(2);
     }
 
