@@ -57,9 +57,9 @@ function CalcularPrecio() {
         }
     }
 
-    precio = lampara - (lampara * descuento);
+    precio = lampara * cantidad;
 
-    precioFinal = precio * cantidad;
+    precioFinal = precio - (precio * descuento);
     precioFinal = parseFloat(precioFinal);
 
     if(precioFinal > 120){
@@ -68,10 +68,13 @@ function CalcularPrecio() {
         precioIIBB = precioFinal + impuesto;
         precioIIBB = precioIIBB.toFixed(2);
 
-        mensaje = "IIBB: Usted pago " + precioIIBB + ", siendo " + impuesto + " el impuesto que se pagó.";
+        mensaje = "IIBB: Usted pago " + precioIIBB;
+        mensaje += ", siendo " + impuesto + " el impuesto que se pagó.";
     } else{
         mensaje = precioFinal.toFixed(2);
     }
 
     document.getElementById('txtIdprecioDescuento').value = mensaje;
 }
+
+// Santiago Collazo - santiago.collazo7@gmail.com
