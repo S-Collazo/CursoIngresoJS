@@ -9,17 +9,18 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio() {
-    let lampara;
+    let precioUnidad;
     let cantidad;
     let marca;
+    let porcentajeDescuento;
     let descuento;
-    let precio;
+    let precioBruto;
     let impuesto;
     let precioIIBB;
     let precioFinal;
     let mensaje;
 
-    lampara = 35;
+    precioUnidad = 35;
 
     cantidad = document.getElementById('txtIdCantidad').value;
     cantidad = parseInt(cantidad);
@@ -28,47 +29,59 @@ function CalcularPrecio() {
     marca = String(marca);
 
     if (cantidad >= 6) {
-        descuento = 0.50;
+        porcentajeDescuento = 0.50;
     }
-
-    if (cantidad == 5) {
-        descuento = 0.30;
-        if (marca == "ArgentinaLuz") {
-            descuento = 0.40;
+    else {
+        if (cantidad == 5) {
+            if (marca == "ArgentinaLuz") {
+                porcentajeDescuento = 0.40;
+            }
+            else {
+                porcentajeDescuento = 0.30;
+            }
+        }
+        if (cantidad == 4) {
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                porcentajeDescuento = 0.25;
+            }
+            else {
+                porcentajeDescuento = 0.20;
+            }
+        }
+        if (cantidad == 3) {
+            if (marca == "ArgentinaLuz") {
+                porcentajeDescuento = 0.15;
+            }
+            if (marca == "FelipeLamparas") {
+                porcentajeDescuento = 0.10;
+            }
+            else {
+                porcentajeDescuento = 0.05;
+            }
+        }
+        else {
+            porcentajeDescuento = 1;
         }
     }
 
-    if (cantidad == 4) {
-        descuento = 0.20;
-        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-            descuento = 0.25;
-        }
-    }
+    precioBruto = precioUnidad * cantidad;
 
-    if (cantidad == 3) {
-        descuento = 0.05;
-        if (marca == "ArgentinaLuz") {
-            descuento = 0.15;
-        }
-        if (marca == "FelipeLamparas") {
-            descuento = 0.10;
-        }
-    }
+    descuento = precioBruto * porcentajeDescuento;
 
-    precio = lampara * cantidad;
-
-    precioFinal = precio - (precio * descuento);
+    precioFinal = precioBruto - descuento;
     precioFinal = parseFloat(precioFinal);
 
     if (precioFinal > 120) {
         impuesto = precioFinal * 0.10;
 
         precioIIBB = precioFinal + impuesto;
+        precioIIBB = parseFloat(precioIIBB);
         precioIIBB = precioIIBB.toFixed(2);
 
         mensaje = "IIBB: Usted pago " + precioIIBB;
         mensaje += ", siendo " + impuesto + " el impuesto que se pagó.";
-    } else {
+    }
+    else {
         mensaje = precioFinal.toFixed(2);
     }
 
