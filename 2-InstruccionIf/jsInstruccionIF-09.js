@@ -2,7 +2,7 @@ function mostrar() {
 	let numero;
 
 	numero = Math.random() * (10 - 1) + 1;
-	numero = parseInt(numero);
+	numero = Math.floor(numero);
 
 	alert(numero);
 }
