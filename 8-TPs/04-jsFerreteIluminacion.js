@@ -13,14 +13,15 @@ function CalcularPrecio() {
     let cantidad;
     let marca;
     let porcentajeDescuento;
-    let descuento;
     let precioBruto;
+    let descuento;
     let impuesto;
     let precioIIBB;
     let precioFinal;
     let mensaje;
 
     precioUnidad = 35;
+    precioUnidad = parseInt(precioUnidad);
 
     cantidad = document.getElementById('txtIdCantidad').value;
     cantidad = parseInt(cantidad);
@@ -28,10 +29,12 @@ function CalcularPrecio() {
     marca = document.getElementById('Marca').value;
     marca = String(marca);
 
+    porcentajeDescuento = 0.00;
+    porcentajeDescuento = parseFloat(porcentajeDescuento);
+
     if (cantidad >= 6) {
         porcentajeDescuento = 0.50;
-    }
-    else {
+    } else {
         if (cantidad == 5) {
             if (marca == "ArgentinaLuz") {
                 porcentajeDescuento = 0.40;
@@ -52,21 +55,21 @@ function CalcularPrecio() {
             if (marca == "ArgentinaLuz") {
                 porcentajeDescuento = 0.15;
             }
-            if (marca == "FelipeLamparas") {
-                porcentajeDescuento = 0.10;
-            }
             else {
-                porcentajeDescuento = 0.05;
+                if (marca == "FelipeLamparas") {
+                    porcentajeDescuento = 0.10;
+                }
+                else {
+                    porcentajeDescuento = 0.05;
+                }
             }
-        }
-        else {
-            porcentajeDescuento = 0;
         }
     }
 
     precioBruto = precioUnidad * cantidad;
 
     descuento = precioBruto * porcentajeDescuento;
+    descuento = parseFloat(descuento);
 
     precioFinal = precioBruto - descuento;
     precioFinal = parseFloat(precioFinal);
@@ -75,7 +78,6 @@ function CalcularPrecio() {
         impuesto = precioFinal * 0.10;
 
         precioIIBB = precioFinal + impuesto;
-        precioIIBB = parseFloat(precioIIBB);
 
         mensaje = precioIIBB.toFixed(2);
 
