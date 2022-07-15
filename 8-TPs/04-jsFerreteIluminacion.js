@@ -29,38 +29,38 @@ function CalcularPrecio() {
     marca = document.getElementById('Marca').value;
     marca = String(marca);
 
-    porcentajeDescuento = 0.00;
-    porcentajeDescuento = parseFloat(porcentajeDescuento);
-
-    if (cantidad >= 6) {
-        porcentajeDescuento = 0.50;
-    } else {
-        if (cantidad == 5) {
-            if (marca == "ArgentinaLuz") {
-                porcentajeDescuento = 0.40;
-            }
-            else {
-                porcentajeDescuento = 0.30;
-            }
-        }
-        if (cantidad == 4) {
-            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-                porcentajeDescuento = 0.25;
-            }
-            else {
-                porcentajeDescuento = 0.20;
-            }
-        }
-        if (cantidad == 3) {
-            if (marca == "ArgentinaLuz") {
-                porcentajeDescuento = 0.15;
-            }
-            else {
-                if (marca == "FelipeLamparas") {
-                    porcentajeDescuento = 0.10;
+    if (cantidad >= 0) {
+        porcentajeDescuento = 0;
+        if (cantidad >= 6) {
+            porcentajeDescuento = 0.50;
+        } else {
+            if (cantidad == 5) {
+                if (marca == "ArgentinaLuz") {
+                    porcentajeDescuento = 0.40;
                 }
                 else {
-                    porcentajeDescuento = 0.05;
+                    porcentajeDescuento = 0.30;
+                }
+            }
+            if (cantidad == 4) {
+                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                    porcentajeDescuento = 0.25;
+                }
+                else {
+                    porcentajeDescuento = 0.20;
+                }
+            }
+            if (cantidad == 3) {
+                if (marca == "ArgentinaLuz") {
+                    porcentajeDescuento = 0.15;
+                }
+                else {
+                    if (marca == "FelipeLamparas") {
+                        porcentajeDescuento = 0.10;
+                    }
+                    else {
+                        porcentajeDescuento = 0.05;
+                    }
                 }
             }
         }
