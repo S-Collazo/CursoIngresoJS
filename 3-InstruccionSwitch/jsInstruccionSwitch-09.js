@@ -12,20 +12,21 @@ function mostrar() {
 
 	porcentaje = 0;
 
-	if (destino == "Bariloche") {
-		switch (estacion) {
-			case "Invierno":
-				porcentaje = 0.20;
-				break;
-			case "Verano":
-				porcentaje = -0.20;
-				break;
-			default:
-				porcentaje = 0.10;
-				break;
-		}
-	} else {
-		if (destino == "Cataratas") {
+	switch (destino) {
+		case "Bariloche":
+			switch (estacion) {
+				case "Invierno":
+					porcentaje = 0.20;
+					break;
+				case "Verano":
+					porcentaje = -0.20;
+					break;
+				default:
+					porcentaje = 0.10;
+					break;
+			}
+			break;
+		case "Cataratas":
 			switch (estacion) {
 				case "Invierno":
 					porcentaje = -0.10;
@@ -37,8 +38,8 @@ function mostrar() {
 					porcentaje = 0.10;
 					break;
 			}
-		}
-		if (destino == "Mar del plata") {
+			break;
+		case "Mar del plata":
 			switch (estacion) {
 				case "Invierno":
 					porcentaje = -0.20;
@@ -50,8 +51,8 @@ function mostrar() {
 					porcentaje = 0.10;
 					break;
 			}
-		}
-		if (destino == "Cordoba") {
+			break;
+		default:
 			switch (estacion) {
 				case "Invierno":
 					porcentaje = -0.10;
@@ -60,7 +61,7 @@ function mostrar() {
 					porcentaje = 0.10;
 					break;
 			}
-		}
+			break;
 	}
 
 	precioFinal = estadia + (estadia * porcentaje);
