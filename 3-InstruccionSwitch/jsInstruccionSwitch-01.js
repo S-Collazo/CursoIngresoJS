@@ -1,9 +1,28 @@
-function mostrar()
-{
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+function mostrar() {
+	let mesDelAño;
+	let mensaje;
 
+	mesDelAño = document.getElementById('txtIdMes').value;
 
+	switch (mesDelAño) {
+		case 'Enero':
+			mensaje = "¡Que comiences bien el año!";
+			break;
+		case 'Marzo':
+			mensaje = "¡A clases!";
+			break;
+		case 'Julio':
+			mensaje = "¡Se vienen las vacaciones!";
+			break;
+		case 'Diciembre':
+			mensaje = "¡Felices fiestas!";
+			break;
+		default:
+			mensaje = "No es un mes con evento."
+			break;
+	}
 
-}//FIN DE LA FUNCIÓN
+	alert(mensaje);
+}
+
+// Santiago Collazo - santiago.collazo7@gmail.com
