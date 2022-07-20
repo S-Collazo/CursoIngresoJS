@@ -5,6 +5,8 @@ function mostrar() {
 	hora = document.getElementById('txtIdHora').value;
 	hora = parseInt(hora);
 
+	mensaje = "La hora no existe."
+
 	if (hora >= 0 && hora <= 24) {
 		switch (hora) {
 			case 7:
@@ -28,8 +30,6 @@ function mostrar() {
 				mensaje = "Es de noche";
 				break;
 		}
-	} else {
-		mensaje = "La hora no existe.";
 	}
 
 	alert(mensaje);
