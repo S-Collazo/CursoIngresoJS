@@ -1,12 +1,15 @@
 /*
 Al presionar el botón pedir un sexo
 'f' para femenino, 'm' para masculino.*/
-function mostrar()
-{
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+function mostrar() {
+	let sexoIngresado;
 
+	do {
+		sexoIngresado = prompt("Ingrese f ó m:");
+		sexoIngresado.toLowerCase;
+	} while (sexoIngresado != "m" && sexoIngresado != "f");
 
+	document.getElementById('txtIdSexo').value = sexoIngresado;
+}
 
-	txtIdSexo.value=sexoIngresado;
-}//FIN DE LA FUNCIÓN
+// Santiago Collazo - santiago.collazo7@gmail.com

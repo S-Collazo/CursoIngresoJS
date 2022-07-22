@@ -2,17 +2,37 @@
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
 e informar la suma acumulada y el promedio.
 */
-function mostrar()
-{
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+function mostrar() {
+	let numero;
+	let suma;
+	let cantidad;
+	let verificador;
+	let promedio;
 
+	numero = 0;
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	suma = 0;
 
-}//FIN DE LA FUNCIÓN
+	cantidad = 0;
+
+	do {
+		numero = prompt("Indicar número:");
+		numero = parseInt(numero);
+
+		suma = suma + numero;
+
+		cantidad++;
+
+		verificador = confirm("¿Continuar agregando números?");
+	} while (verificador);
+
+	promedio = suma / cantidad;
+	promedio = parseFloat(promedio);
+	promedio = promedio.toFixed(2);
+
+	document.getElementById('txtIdSuma').value = suma;
+
+	document.getElementById('txtIdPromedio').value = promedio;
+}
+
+// Santiago Collazo - santiago.collazo7@gmail.com
