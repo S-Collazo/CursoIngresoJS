@@ -3,21 +3,30 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar() {
 	let numero;
+	let bandera;
 	let numeroMaximo;
 	let numeroMinimo;
 	let verificador;
 
-	numeroMaximo = Number.NEGATIVE_INFINITY;
+	bandera = true;
 
-	numeroMinimo = Number.POSITIVE_INFINITY;
+	numeroMaximo = 0;
+	numeroMinimo = 0;
 
 	do {
 		numero = prompt("Indicar número:");
 		numero = parseInt(numero);
 
-		if (numero > numeroMaximo) {
+		if (bandera == true) {
+			numeroMinimo = numero;
 			numeroMaximo = numero;
-		} else {
+
+			bandera = false;
+		}
+		else {
+			if (numero > numeroMaximo) {
+				numeroMaximo = numero;
+			}
 			if (numero < numeroMinimo) {
 				numeroMinimo = numero;
 			}
