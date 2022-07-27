@@ -10,12 +10,11 @@ function mostrar() {
 
 	bandera = true;
 
-	numeroMaximo = 0;
-	numeroMinimo = 0;
-
 	do {
+		do {
 		numero = prompt("Indicar número:");
 		numero = parseInt(numero);
+	} while (isNaN(numero));
 
 		if (bandera == true) {
 			numeroMinimo = numero;
