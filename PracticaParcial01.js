@@ -12,11 +12,9 @@ e.	Sobre el maximo encontrado aplicar un descuento del 10% a dicho importe.
 function mostrar() {
     let bandera;
     let i;
-
     let importe;
     let marca;
     let pais;
-
     let importeTotal;
     let importeMaximo;
     let paisImporteMaximo;
@@ -25,10 +23,8 @@ function mostrar() {
     let paisImporteMinimo;
     let marcaImporteMinimo;
     let productosChina;
-
     let promedio;
     let importeMaximoDesc;
-
     let mensaje;
 
     bandera = true;
@@ -40,23 +36,17 @@ function mostrar() {
     importeTotal = 0;
 
     for (i = 0; i < 5; i++) {
-        importe = prompt("Importe:");
-        importe = parseInt(importe);
-
-        while (isNaN(importe) || importe <= 0) {
-            importe = prompt("El importe no es un númnero. Reingresar importe:");
+        do {
+            importe = prompt("Importe:");
             importe = parseInt(importe);
-        }
+        } while (isNaN(importe) || importe <= 0);
 
         marca = prompt("Marca:");
 
-        pais = prompt("País (China, Uruguay o Paraguay):");
-        pais = pais.toLowerCase();
-
-        while (pais != "china" && pais != "uruguay" && pais != "paraguay") {
-            pais = prompt("Pais incorrecto. Reingresar país:");
+        do {
+            pais = prompt("País (China, Uruguay o Paraguay):");
             pais = pais.toLowerCase();
-        }
+        } while (pais != "china" && pais != "uruguay" && pais != "paraguay");
 
         if (bandera) {
             importeMaximo = importe;
