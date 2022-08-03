@@ -187,7 +187,7 @@ function mostrar() {
     if (otros > 0) {
         mensaje += "Otro más viejo: " + nombreOtroMasViejo + " (" + edadOtroMasViejo + " años)" + "\n";
     }
-    mensaje += "Raza de gatos con más animales: " + gatosMasNumerosos + "\n";
+    mensaje += "Raza de gatos más numerosa: " + gatosMasNumerosos + "\n";
     mensaje += "Promedio de edad de esa raza: " + promedio + "\n";
 
     alert(mensaje);
