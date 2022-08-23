@@ -1,0 +1,208 @@
+// Biblioteca:
+
+// Dar valor mediante HTML:
+nombreIngresado = document.getElementById('txtIdNombre').value;
+
+// Dar valor a HTML:
+document.getElementById('txtIdNombre').value = nombre;
+
+// Promedio:
+promedio = suma / cantidad;
+promedio = parseFloat(promedio);
+promedio = promedio.toFixed(2);
+
+// Resto:
+totalResto = numeroDividendo % numeroDivisor;
+
+// Aumento:
+porcentaje = prompt("Porcentaje:");
+porcentaje = parseInt(porcentaje);
+
+aumento = sueldo * porcentaje;
+aumento = parseFloat(aumento);
+
+resultado = sueldo + aumento;
+
+// Descuento:
+porcentaje = prompt("Porcentaje:");
+porcentaje = parseInt(porcentaje);
+
+descuento = sueldo * porcentaje;
+descuento = parseFloat(descuento);
+
+resultado = sueldo - descuento;
+
+// Random:
+numero = Math.random() * 10 + 1;
+numero = Math.floor(numero);
+
+// Par:
+if (temptMin % 2 == 0) {
+    temptPar++;
+}
+
+// Switch:
+switch (mesDelAño) {
+    case 'Enero':
+        mensaje = "¡Que comiences bien el año!";
+        break;
+    case 'Marzo':
+        mensaje = "¡A clases!";
+        break;
+    case 'Julio':
+        mensaje = "¡Se vienen las vacaciones!";
+        break;
+    case 'Diciembre':
+        mensaje = "¡Felices fiestas!";
+        break;
+    default:
+        mensaje = "No es un mes con evento."
+        break;
+}
+
+// Switch con switch:
+switch (destino) {
+    case "Bariloche":
+        switch (estacion) {
+            case "Invierno":
+                porcentaje = 0.20;
+                break;
+            case "Verano":
+                porcentaje = -0.20;
+                break;
+            default:
+                porcentaje = 0.10;
+                break;
+        }
+        break;
+    case "Cataratas":
+        switch (estacion) {
+            case "Invierno":
+                porcentaje = -0.10;
+                break;
+            case "Verano":
+                porcentaje = 0.10;
+                break;
+            default:
+                porcentaje = 0.10;
+                break;
+        }
+        break;
+}
+
+// Switch marcas:
+if (cantidad > 0) {
+    switch (cantidad) {
+        case 1:
+        case 2:
+            porcentajeDescuento = 0;
+            break;
+        case 3:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentajeDescuento = 0.15;
+                    break;
+                case "FelipeLamparas":
+                    porcentajeDescuento = 0.10;
+                    break;
+                default:
+                    porcentajeDescuento = 0.05;
+                    break;
+            }
+            break;
+        case 4:
+            switch (marca) {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    porcentajeDescuento = 0.25;
+                    break;
+                default:
+                    porcentajeDescuento = 0.20;
+                    break;
+            }
+            break;
+        case 5:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentajeDescuento = 0.40;
+                    break;
+                default:
+                    porcentajeDescuento = 0.30;
+                    break;
+            }
+            break;
+        default:
+            porcentajeDescuento = 0.50;
+            break;
+    }
+}
+
+// Do while:
+do {
+    numero = prompt("Ingresar número entre 0 y 9 inclusive:");
+} while (!(numero >= 0 && numero <= 9));
+
+// Do while numero:
+do {
+    importe = prompt("Importe:");
+    importe = parseInt(importe);
+} while (isNaN(importe) || importe <= 0);
+
+// Do while genero:
+do {
+    sexoIngresado = prompt("Ingrese f ó m:");
+    sexoIngresado.toLowerCase;
+} while (sexoIngresado != "m" && sexoIngresado != "f");
+
+// Do while rango de valores:
+do {
+    do {
+        peso = prompt("Peso en kg (entre 10 y 1000): ");
+        peso = parseInt(peso);
+    } while (!(peso >= 10 && peso <= 1000));
+}
+
+// Verificador:
+do {
+    numero = prompt("Indicar número:");
+    numero = parseInt(numero);
+
+    suma = suma + numero;
+
+    cantidad++;
+
+    verificador = confirm("¿Continuar agregando números?");
+} while (verificador);
+
+// Bandera:
+if (bandera) {
+    importeMaximo = importe;
+    paisImporteMaximo = pais;
+    marcaImporteMaximo = marca;
+
+    bandera = false;
+} else {
+    if (importe > importeMaximo) {
+        importeMaximo = importe;
+        paisImporteMaximo = pais;
+        marcaImporteMaximo = marca;
+    }
+}
+
+// Document write:
+document.write("<br> Suma de los positivos: " + sumaPos);
+document.write("<br> Suma de los negativos: " + sumaNeg);
+document.write("<br> Cantidad de positivos: " + cantidadPos);
+document.write("<br> Cantidad de negativos: " + cantidadNeg);
+document.write("<br> Cantidad de ceros: " + cantidadCero);
+document.write("<br> Cantidad de números pares: " + cantidadPar);
+document.write("<br> Promedio de positivos: " + promedioPos);
+document.write("<br> Promedio de negativos: " + promedioNeg);
+document.write("<br> Diferencia entre positivos y negativos: " + diferencia);
+
+// Mensaje:
+mensaje = "a.	Minimo importe con su pais: " + importeMinimo + " (" + paisImporteMinimo + ")" + "\n";
+mensaje += "b.	Maximo importe con su marca: " + importeMaximo + " (" + marcaImporteMaximo + ")" + "\n";
+mensaje += "c.	Promedio importe: " + promedio + "\n";
+mensaje += "d.	Cantidad de productos de China: " + productosChina + "\n";
+mensaje += "e.	Maximo con descuento del 10%: " + importeMaximoDesc + "\n";
